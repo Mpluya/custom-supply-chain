@@ -22,7 +22,7 @@ spec:
         - name: revision
           value: $(data.values.source.revision)$
       workspaces:
-        - name: shared-workspace
+        - name: supplychain-workspace
           volumeClaimTemplate:
             spec:
               accessModes:
