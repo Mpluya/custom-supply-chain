@@ -28,3 +28,4 @@ spec:
       script: |
           #!/usr/bin/env bash
           ls -al
+          yamllint "$(params.args)"
