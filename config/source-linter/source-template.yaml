@@ -17,9 +17,9 @@ spec:
       pipelineRef:
         name: linter-pipeline
       params:
-        - name: repository
+        - name: source-url
           value: $(sources.source.url)$
-        - name: revision
+        - name: source-revision
           value: $(sources.source.revision)$
       workspaces:
         - name: supplychain-workspace
