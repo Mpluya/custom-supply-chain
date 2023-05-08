@@ -27,6 +27,5 @@ spec:
       workingDir: $(workspaces.supplychain-workspace.path)
       script: |
         #!/usr/bin/env bash
-
         ls -al
         yamllint "$(params.args)"
