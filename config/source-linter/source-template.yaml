@@ -1,3 +1,4 @@
+#@ load("@ytt:data", "data")
 ---
 apiVersion: carto.run/v1alpha1
 kind: ClusterSourceTemplate
@@ -18,9 +19,9 @@ spec:
         name: linter-pipeline
       params:
         - name: repository
-          value: $(data.values.source.url)$
+          value: #@ data.values.source.url
         - name: revision
-          value: $(data.values.source.revision)$
+          value: #@ data.values.source.url
       workspaces:
         - name: supplychain-workspace
           volumeClaimTemplate:
