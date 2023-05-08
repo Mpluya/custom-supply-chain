@@ -18,9 +18,9 @@ spec:
         name: linter-pipeline
       params:
         - name: repository
-          value: $(data.values.source.url)$
+          value: $(sources.source.url)$
         - name: revision
-          value: $(data.values.source.revision)$
+          value: $(sources.source.revision)$
       workspaces:
         - name: supplychain-workspace
           volumeClaimTemplate:
