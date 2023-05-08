@@ -22,9 +22,17 @@ spec:
       description: extra args needs to append
       default: ["--help"]
   steps:
+    - name: what-do-we-jave
+      image: registry.harbor.learn.tapsme.org/tap/tap-packages@sha256:f325a8d83abd2f1a7741045472ab96e6929f52fd330e432777e54f8e6f459c7e
+      workingDir: $(workspaces.supplychain-workspace.path)
+      script: |
+        #!/usr/bin/env bash
+        pwd
+        ls -al      
     - name: lint-yaml-files
       image: docker.io/cytopia/yamllint:1.23@sha256:e9deea51bbdc35950cacf6594dab94100d9bbf5c987540b8874167d58e6bdce2 #tag: 1.23
       workingDir: $(workspaces.supplychain-workspace.path)
-      script: |
-          #!/usr/bin/env bash
-          ls -al
+      command:
+        - yamllint
+      args:
+        - $(params.args)
