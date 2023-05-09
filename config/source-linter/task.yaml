@@ -22,7 +22,7 @@ spec:
       description: extra args needs to append
       default: ["--help"]
   steps:
-    - name: what-do-we-jave
+    - name: what-do-we-have
       image: registry.harbor.learn.tapsme.org/tap/tap-packages@sha256:f325a8d83abd2f1a7741045472ab96e6929f52fd330e432777e54f8e6f459c7e
       workingDir: $(workspaces.supplychain-workspace.path)
       script: |
