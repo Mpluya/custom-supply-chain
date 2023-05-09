@@ -22,7 +22,6 @@ spec:
         - name: source-revision
           value: $(sources.source.revision)$
         - name: args
-          type: array
       workspaces:
         - name: supplychain-workspace
           volumeClaimTemplate:
